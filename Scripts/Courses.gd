@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func _on_calculus_i_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Calculus_I.tscn");
+	get_tree().change_scene_to_file("res://Scenes/Calculus_I/Calculus_I.tscn");
 
 func _on_calculus_ii_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Calculus_II.tscn");

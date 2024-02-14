@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bui582ui6ga8j"]
+[gd_scene load_steps=5 format=3 uid="uid://bui582ui6ga8j"]
 
+[ext_resource type="Script" path="res://Scripts/Calculus_I/Calculus_I.gd" id="1_mpvre"]
 [ext_resource type="FontFile" uid="uid://ku183lio56ft" path="res://Fonts/ShadowsIntoLight-Regular.ttf" id="1_qij6m"]
 [ext_resource type="FontFile" uid="uid://sdv1lenydq2d" path="res://Fonts/handwritten_font_50.tres" id="2_20k87"]
+[ext_resource type="Texture2D" uid="uid://85m183qoh81w" path="res://Sprites/backarrow.png" id="4_etm5j"]
 
 [node name="Calculus_I" type="Node2D"]
+script = ExtResource("1_mpvre")
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -79,3 +82,16 @@ action_mode = 0
 text = "Final"
 flat = true
 icon_alignment = 1
+
+[node name="BackButton" type="Button" parent="UI/Buttons"]
+offset_right = 520.0
+offset_bottom = 520.0
+scale = Vector2(0.31, 0.31)
+icon = ExtResource("4_etm5j")
+icon_alignment = 1
+
+[connection signal="pressed" from="UI/Buttons/GridContainer/Test_1" to="." method="_on_test_1_pressed"]
+[connection signal="pressed" from="UI/Buttons/GridContainer/Test_2" to="." method="_on_test_2_pressed"]
+[connection signal="pressed" from="UI/Buttons/GridContainer/Test_3" to="." method="_on_test_3_pressed"]
+[connection signal="pressed" from="UI/Buttons/GridContainer/Final" to="." method="_on_final_pressed"]
+[connection signal="pressed" from="UI/Buttons/BackButton" to="." method="_on_back_button_pressed"]
