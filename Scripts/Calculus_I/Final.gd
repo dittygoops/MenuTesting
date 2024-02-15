@@ -12,5 +12,4 @@ func _process(delta):
 
 
 func _on_back_button_pressed():
-	print("Final --> Calculus I");
 	get_tree().change_scene_to_file("res://Scenes/Calculus_I/Calculus_I.tscn");
