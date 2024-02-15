@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Calculus_I/Calculus_I.gd" id="1_mpvre"]
 [ext_resource type="FontFile" uid="uid://ku183lio56ft" path="res://Fonts/ShadowsIntoLight-Regular.ttf" id="1_qij6m"]
 [ext_resource type="FontFile" uid="uid://sdv1lenydq2d" path="res://Fonts/handwritten_font_50.tres" id="2_20k87"]
-[ext_resource type="Texture2D" uid="uid://85m183qoh81w" path="res://Sprites/backarrow.png" id="4_etm5j"]
+[ext_resource type="Texture2D" uid="uid://badcujxbwey8h" path="res://Sprites/backarrow.png" id="4_etm5j"]
 
 [node name="Calculus_I" type="Node2D"]
 script = ExtResource("1_mpvre")

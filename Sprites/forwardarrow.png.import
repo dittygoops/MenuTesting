@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://badcujxbwey8h"
-path="res://.godot/imported/backarrow.png-5ad88b5a7212f387f991a129d1ac1a20.ctex"
+uid="uid://cwfyorhapjttc"
+path="res://.godot/imported/forwardarrow.png-353c5043f79f964cda7e1eb6179d8a0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/backarrow.png"
-dest_files=["res://.godot/imported/backarrow.png-5ad88b5a7212f387f991a129d1ac1a20.ctex"]
+source_file="res://Sprites/forwardarrow.png"
+dest_files=["res://.godot/imported/forwardarrow.png-353c5043f79f964cda7e1eb6179d8a0b.ctex"]
 
 [params]
 

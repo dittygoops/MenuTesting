@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://8r40xd1fcdjc"]
+[gd_scene load_steps=6 format=3 uid="uid://8r40xd1fcdjc"]
 
 [ext_resource type="Script" path="res://Scripts/Calculus_I/Test_1.gd" id="1_svohy"]
 [ext_resource type="FontFile" uid="uid://ku183lio56ft" path="res://Fonts/ShadowsIntoLight-Regular.ttf" id="2_ey1hu"]
-[ext_resource type="Texture2D" uid="uid://85m183qoh81w" path="res://Sprites/backarrow.png" id="4_skaar"]
+[ext_resource type="Texture2D" uid="uid://cwfyorhapjttc" path="res://Sprites/forwardarrow.png" id="4_gio0i"]
+[ext_resource type="Texture2D" uid="uid://badcujxbwey8h" path="res://Sprites/backarrow.png" id="4_skaar"]
+[ext_resource type="FontFile" uid="uid://sdv1lenydq2d" path="res://Fonts/handwritten_font_50.tres" id="5_pirjb"]
 
 [node name="Test_1" type="Node2D"]
 script = ExtResource("1_svohy")
@@ -34,5 +36,35 @@ offset_bottom = 520.0
 scale = Vector2(0.31, 0.31)
 icon = ExtResource("4_skaar")
 icon_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Buttons"]
+offset_top = 450.0
+offset_right = 1044.0
+offset_bottom = 970.0
+scale = Vector2(0.2, 0.2)
+
+[node name="FCBackButton" type="Button" parent="UI/Buttons/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_skaar")
+
+[node name="FCForwardButton" type="Button" parent="UI/Buttons/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_gio0i")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
+custom_minimum_size = Vector2(1024, 100)
+offset_top = 200.0
+offset_right = 1024.0
+offset_bottom = 300.0
+
+[node name="ProblemString" type="Label" parent="UI/HBoxContainer"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_pirjb")
+
+[node name="AnswerString" type="Label" parent="UI/HBoxContainer"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_pirjb")
 
 [connection signal="pressed" from="UI/Buttons/BackButton" to="." method="_on_back_button_pressed"]

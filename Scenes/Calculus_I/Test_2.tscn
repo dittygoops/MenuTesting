@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Calculus_I/Test_2.gd" id="1_r1lxu"]
 [ext_resource type="FontFile" uid="uid://ku183lio56ft" path="res://Fonts/ShadowsIntoLight-Regular.ttf" id="2_usl25"]
-[ext_resource type="Texture2D" uid="uid://85m183qoh81w" path="res://Sprites/backarrow.png" id="4_ibwjr"]
+[ext_resource type="Texture2D" uid="uid://badcujxbwey8h" path="res://Sprites/backarrow.png" id="4_ibwjr"]
 
 [node name="Test_2" type="Node2D"]
 script = ExtResource("1_r1lxu")
