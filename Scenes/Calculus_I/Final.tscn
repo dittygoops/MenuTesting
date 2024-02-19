@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://4gqmpawvr5pg"]
+[gd_scene load_steps=6 format=3 uid="uid://dlckndolu8ubd"]
 
-[ext_resource type="Script" path="res://Scripts/Calculus_I/Final.gd" id="1_tx8ph"]
-[ext_resource type="FontFile" uid="uid://ku183lio56ft" path="res://Fonts/ShadowsIntoLight-Regular.ttf" id="2_3c70v"]
-[ext_resource type="Texture2D" uid="uid://badcujxbwey8h" path="res://Sprites/backarrow.png" id="4_5idki"]
+[ext_resource type="Script" path="res://Scripts/Calculus_I/Test_2.gd" id="1_w6wku"]
+[ext_resource type="FontFile" uid="uid://ku183lio56ft" path="res://Fonts/ShadowsIntoLight-Regular.ttf" id="2_p352v"]
+[ext_resource type="Texture2D" uid="uid://badcujxbwey8h" path="res://Sprites/backarrow.png" id="3_dbqni"]
+[ext_resource type="Texture2D" uid="uid://cwfyorhapjttc" path="res://Sprites/forwardarrow.png" id="4_286bc"]
+[ext_resource type="FontFile" uid="uid://sdv1lenydq2d" path="res://Fonts/handwritten_font_50.tres" id="5_31jd4"]
 
 [node name="Final" type="Node2D"]
-script = ExtResource("1_tx8ph")
+script = ExtResource("1_w6wku")
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -13,6 +15,7 @@ script = ExtResource("1_tx8ph")
 offset_right = 1024.0
 offset_bottom = 576.0
 color = Color(0.886275, 0.905882, 0.701961, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="UI" type="Node2D" parent="."]
 
@@ -20,9 +23,10 @@ color = Color(0.886275, 0.905882, 0.701961, 1)
 offset_right = 1024.0
 offset_bottom = 144.0
 theme_override_colors/font_color = Color(0.423529, 0.423529, 0.423529, 1)
-theme_override_fonts/font = ExtResource("2_3c70v")
+theme_override_fonts/font = ExtResource("2_p352v")
 theme_override_font_sizes/font_size = 100
-text = "Final"
+text = "Final
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -32,7 +36,37 @@ vertical_alignment = 1
 offset_right = 520.0
 offset_bottom = 520.0
 scale = Vector2(0.31, 0.31)
-icon = ExtResource("4_5idki")
+icon = ExtResource("3_dbqni")
 icon_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Buttons"]
+offset_top = 450.0
+offset_right = 1044.0
+offset_bottom = 970.0
+scale = Vector2(0.2, 0.2)
+
+[node name="FCBackButton" type="Button" parent="UI/Buttons/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_dbqni")
+
+[node name="FCForwardButton" type="Button" parent="UI/Buttons/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_286bc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
+custom_minimum_size = Vector2(1024, 100)
+offset_top = 200.0
+offset_right = 1024.0
+offset_bottom = 300.0
+
+[node name="ProblemString" type="Label" parent="UI/HBoxContainer"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_31jd4")
+
+[node name="AnswerString" type="Label" parent="UI/HBoxContainer"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_31jd4")
 
 [connection signal="pressed" from="UI/Buttons/BackButton" to="." method="_on_back_button_pressed"]

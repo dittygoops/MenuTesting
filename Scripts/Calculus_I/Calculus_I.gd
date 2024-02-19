@@ -12,17 +12,20 @@ func _process(delta):
 
 
 func _on_back_button_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Courses.tscn");
-
+	get_node(".").visible = false;
 
 func _on_test_1_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Calculus_I/Test_1.tscn");
+	var Test_1 = get_node("Test_1");
+	Test_1.visible = true;
 
 func _on_test_2_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Calculus_I/Test_2.tscn");
+	var Test_2 = get_node("Test_2");
+	Test_2.visible = true;
 
 func _on_test_3_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Calculus_I/Test_3.tscn");
+	var Test_3 = get_node("Test_3");
+	Test_3.visible = true;
 
 func _on_final_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Calculus_I/Final.tscn")
+	var Final = get_node("Final");
+	Final.visible = true;

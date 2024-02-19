@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bui582ui6ga8j"]
+[gd_scene load_steps=9 format=3 uid="uid://bui582ui6ga8j"]
 
 [ext_resource type="Script" path="res://Scripts/Calculus_I/Calculus_I.gd" id="1_mpvre"]
 [ext_resource type="FontFile" uid="uid://ku183lio56ft" path="res://Fonts/ShadowsIntoLight-Regular.ttf" id="1_qij6m"]
 [ext_resource type="FontFile" uid="uid://sdv1lenydq2d" path="res://Fonts/handwritten_font_50.tres" id="2_20k87"]
 [ext_resource type="Texture2D" uid="uid://badcujxbwey8h" path="res://Sprites/backarrow.png" id="4_etm5j"]
+[ext_resource type="PackedScene" uid="uid://dlckndolu8ubd" path="res://Scenes/Calculus_I/Final.tscn" id="5_qjr8p"]
+[ext_resource type="PackedScene" uid="uid://8r40xd1fcdjc" path="res://Scenes/Calculus_I/Test_1.tscn" id="6_pynt0"]
+[ext_resource type="PackedScene" uid="uid://t2tgpxaqj0en" path="res://Scenes/Calculus_I/Test_2.tscn" id="7_tklub"]
+[ext_resource type="PackedScene" uid="uid://dlqmkqglwkdk" path="res://Scenes/Calculus_I/Test_3.tscn" id="8_fk1tg"]
 
 [node name="Calculus_I" type="Node2D"]
 script = ExtResource("1_mpvre")
@@ -89,6 +93,18 @@ offset_bottom = 520.0
 scale = Vector2(0.31, 0.31)
 icon = ExtResource("4_etm5j")
 icon_alignment = 1
+
+[node name="Final" parent="." instance=ExtResource("5_qjr8p")]
+visible = false
+
+[node name="Test_1" parent="." instance=ExtResource("6_pynt0")]
+visible = false
+
+[node name="Test_2" parent="." instance=ExtResource("7_tklub")]
+visible = false
+
+[node name="Test_3" parent="." instance=ExtResource("8_fk1tg")]
+visible = false
 
 [connection signal="pressed" from="UI/Buttons/GridContainer/Test_1" to="." method="_on_test_1_pressed"]
 [connection signal="pressed" from="UI/Buttons/GridContainer/Test_2" to="." method="_on_test_2_pressed"]
