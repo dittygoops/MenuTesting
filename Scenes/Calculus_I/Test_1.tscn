@@ -60,11 +60,17 @@ offset_bottom = 300.0
 [node name="ProblemString" type="Label" parent="UI/HBoxContainer"]
 custom_minimum_size = Vector2(512, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_pirjb")
+theme_override_font_sizes/font_size = 50
 
 [node name="AnswerString" type="Label" parent="UI/HBoxContainer"]
 custom_minimum_size = Vector2(512, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_pirjb")
+theme_override_font_sizes/font_size = 50
 
 [connection signal="pressed" from="UI/Buttons/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="UI/Buttons/HBoxContainer/FCBackButton" to="." method="_on_fc_back_button_pressed"]
+[connection signal="pressed" from="UI/Buttons/HBoxContainer/FCForwardButton" to="." method="_on_fc_forward_button_pressed"]
